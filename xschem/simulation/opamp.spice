@@ -1,0 +1,19 @@
+** sch_path: /home/ttuser/ttsky25b-analog-relax-oscillator/xschem/opamp.sch
+.subckt opamp VDD OUT P N VSS
+*.PININFO VDD:B VSS:B P:I N:I OUT:O
+XR1 net2 VDD VSS sky130_fd_pr__res_xhigh_po_0p35 L=24.36 mult=1 m=1
+XM1 net2 net2 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM7 net1 net1 VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=2
+XM8 OUT net1 VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=2
+XM4 net6 net2 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM5 net1 P net6 sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM6 OUT N net6 sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM2 net5 net2 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM9 net4 net5 VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=2
+XM3 VDD net5 net5 sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=2
+XM10 net3 P net4 sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=2
+XM11 OUT N net4 sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=2
+XM12 net3 net3 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM13 OUT net3 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+.ends
+.end
